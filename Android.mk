@@ -12,7 +12,7 @@ zopfli_src_files := zopfli/src/zopfli/blocksplitter.c \
 					zopfli/src/zopfli/katajainen.c
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libzopfli
+LOCAL_MODULE := libzopfli_static
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(zopfli_src_files)
 LOCAL_C_INCLUDES := $(LOCAL_PATH) external/zlib external/pigz/zopfli/src/zopfli
@@ -30,7 +30,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := pigz
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(pigz_src_files)
-LOCAL_STATIC_LIBRARIES := libzopfli
+LOCAL_STATIC_LIBRARIES := libzopfli_static
 LOCAL_SHARED_LIBRARIES := libz
 LOCAL_C_INCLUDES := $(LOCAL_PATH) external/zlib external/pigz/zopfli/src/zopfli
 LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
